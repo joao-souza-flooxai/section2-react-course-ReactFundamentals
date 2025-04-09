@@ -2,5 +2,5 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const el = document.getElementById('root');
-
-ReactDOM.render(<h1>Olá, Mundo!</h1>, el);
+const tag = <p>Isso é um exemplo de paragrafo</p>
+ReactDOM.render(<div><h1>Olá, Mundo!</h1> {tag} </div>, el);
