@@ -2,9 +2,16 @@ import React from "react";
 import "./Card.css";
 
 export default function Card(props){
-//class é uma palavra reservada
+
+const style ={
+    //como não é possível usar -, usa-se camelCase
+    backgroundColor: props.color || '#F00',
+    borderColor: props.color || '#F00'
+}
+
     return (
-            <div className="Card">
+        //class é uma palavra reservada por isso usa-se className
+            <div className="Card" style={style}>
                 <div className="Title">{props.title}</div>
                 <div className="Content">
                     {props.children}
