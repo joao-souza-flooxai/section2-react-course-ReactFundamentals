@@ -1,12 +1,12 @@
 import React from "react";
 
 export default function Random (props) {
-    const aleatorio = Math.random() * (props.max - props.min);
-    //Destruturação de um obj
     const {min,max} = props;
+    const aleatorio = parseInt(Math.random() * (max - min)) + min;
+    //Destruturação de um obj
     return (
         <div>
-            <h2>Valor Aleatório</h2>
+            <h3>Valor Aleatório</h3>
             <p>
                 <strong>Valor Mínimo: </strong> {min}
             </p>

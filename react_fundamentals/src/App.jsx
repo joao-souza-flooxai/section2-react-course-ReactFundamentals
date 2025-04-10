@@ -1,28 +1,40 @@
 import React from "react";
 
 import First from "./components/basic/First";
-import WithParams from  "./components/basic/WithParams";
+import WithProps from  "./components/basic/WithProps";
 import Fragment from "./components/basic/Fragment";
 import Random from "./components/basic/Random";
+import Card from "./components/layout/Card";
 
 export default function App (props) {
     
-    return(<div id="app">
-        <First/>
-        <h1>Fundamentos React</h1>
+    return(
+    
+        <div id="app">
 
-        <Fragment />
+            <h1>Fundamentos React</h1>
+            
+            <Card  title="First Component">
+                <First/>
+            </Card>
 
-        <WithParams
-            title="Situação do Aluno"
-            student="Pedro Silva"
-            grade={9.3}
-        />
+            <Card  title="Fragment">
+                <Fragment />
+            </Card>
 
-        <Random
-            min="10"
-            max="20"
-        />
+            <Card  title="Component with Props">
+                <WithProps
+                    title="Situação do Aluno"
+                    student="Pedro Silva"
+                    grade={9.3}
+                />
+            </Card>
 
-    </div>);
+            <Card  title="Random"> 
+                <Random min="10" max="20"/>
+            </Card>
+
+            
+        </div>
+    );
 }
