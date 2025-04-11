@@ -8,6 +8,8 @@ import Card from "./components/layout/Card";
 import Family from "./components/basic/Family";
 import FamilyMember from "./components/basic/FamilyMember";
 import ListStudents from "./components/repeat/ListStudents";
+import TableProducts from "./components/repeat/TableProducts";
+import EvenOrOdd from "./components/conditional/EvenOrOdd";
 
 export default function App (props) {
     
@@ -49,6 +51,15 @@ export default function App (props) {
 
                 <Card  title="Repeat" color="#080">
                     <ListStudents></ListStudents>
+                </Card>
+
+                
+                <Card  title="Table Products" color="#050">
+                    <TableProducts></TableProducts>
+                </Card>
+
+                <Card  title="Conditional Rendering" color="#050">
+                    <EvenOrOdd number={20}></EvenOrOdd>
                 </Card>
 
             </div>
