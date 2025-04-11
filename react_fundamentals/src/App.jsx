@@ -10,6 +10,7 @@ import FamilyMember from "./components/basic/FamilyMember";
 import ListStudents from "./components/repeat/ListStudents";
 import TableProducts from "./components/repeat/TableProducts";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
+import UserInfo from "./components/conditional/UserInfo";
 
 export default function App (props) {
     
@@ -60,6 +61,13 @@ export default function App (props) {
 
                 <Card  title="Conditional Rendering" color="#050">
                     <EvenOrOdd number={20}></EvenOrOdd>
+                </Card>
+
+                <Card  title="Conditional Rendering" color="#050">
+                    <UserInfo user={{name:"João"}}></UserInfo>
+                    <UserInfo user={{email:"joao@gmail.com"}}></UserInfo>
+                    <UserInfo user={{}}></UserInfo>
+                    <UserInfo></UserInfo>
                 </Card>
 
             </div>
