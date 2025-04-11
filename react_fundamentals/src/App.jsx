@@ -11,6 +11,12 @@ import ListStudents from "./components/repeat/ListStudents";
 import TableProducts from "./components/repeat/TableProducts";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
 import UserInfo from "./components/conditional/UserInfo";
+import DirectParent from "./components/comunication/DirectParent";
+import IndirectParent from "./components/comunication/IndirectParent";
+import Input from "./components/form/Input";
+import Counter from "./components/counter/Counter";
+import Mega from "./components/mega/Mega";
+
 
 export default function App (props) {
     
@@ -42,7 +48,7 @@ export default function App (props) {
                     <Random min="10" max="20"/>
                 </Card>
 
-                <Card  title="Component with children" color="#080">
+                <Card  title="Component with children" >
                     <Family surname="Crivoi">
                         <FamilyMember name="Ana" />
                         <FamilyMember name="João" />
@@ -50,24 +56,44 @@ export default function App (props) {
                     </Family>
                 </Card>
 
-                <Card  title="Repeat" color="#080">
+                <Card  title="Repeat" >
                     <ListStudents></ListStudents>
                 </Card>
 
                 
-                <Card  title="Table Products" color="#050">
+                <Card  title="Table Products" >
                     <TableProducts></TableProducts>
                 </Card>
 
-                <Card  title="Conditional Rendering" color="#050">
+                <Card  title="Conditional Rendering" >
                     <EvenOrOdd number={20}></EvenOrOdd>
                 </Card>
 
-                <Card  title="Conditional Rendering" color="#050">
+                <Card  title="Conditional Rendering" >
                     <UserInfo user={{name:"João"}}></UserInfo>
                     <UserInfo user={{email:"joao@gmail.com"}}></UserInfo>
                     <UserInfo user={{}}></UserInfo>
                     <UserInfo></UserInfo>
+                </Card>
+
+                <Card  title="Direct Comunication" >
+                  <DirectParent></DirectParent>
+                </Card>
+
+                <Card  title="Indirect Comunication and State" >
+                  <IndirectParent></IndirectParent>
+                </Card>
+
+                <Card  title="Input - Controlled Component" color="#050">
+                  <Input></Input>
+                </Card>
+
+                <Card  title="Counter" color="#050">
+                  <Counter initialNumber={0}></Counter>
+                </Card>
+
+                <Card  title="Mega" color="#050">
+                  <Mega></Mega>
                 </Card>
 
             </div>

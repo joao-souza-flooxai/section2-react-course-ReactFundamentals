@@ -1,5 +1,5 @@
 import React from 'react';
-import IF from "./if";
+import IF, {Else} from "./if";
 
 export default function UserInfo (props)  {
     const user = props.user || {};
@@ -11,6 +11,13 @@ export default function UserInfo (props)  {
 
             <IF test={!user || !user.name}>
                 Seja bem-vindo <strong>Amigão!</strong>!
+            </IF>
+
+            <IF test={!user || !user.name}>
+                Seja bem-vindo <strong>Amigão!</strong>!
+                <Else>
+                 Seja bem-vindo <strong>Amigão!</strong>!
+                </Else>
             </IF>
         </div>
     );
